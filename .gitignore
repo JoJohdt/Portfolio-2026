@@ -1,0 +1,16 @@
+# Fichiers systèmes Windows / Mac
+Thumbs.db
+.DS_Store
+
+# Fichiers de configuration des éditeurs de code (VS Code, etc.)
+.vscode/
+.idea/
+
+# Fichiers de consignes et brouillons personnels situés à la racine
+/*.pdf
+/*.txt
+
+# Images "brutes" situées à la racine (elles sont déjà rangées proprement dans assets/images/)
+/*.png
+/*.jpg
+/*.jpeg

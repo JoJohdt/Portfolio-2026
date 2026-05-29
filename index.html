@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio BUT 2 - Johan HUNDERT</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- En-tête (toujours visible) -->
+    <header id="main-header">
+        <div class="header-content">
+            <div class="header-identity">
+                <h1>Johan <strong>HUNDERT</strong></h1>
+                <span class="header-email">
+                    johan.hundert@edu.univ-fcomte.fr
+                </span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home" class="active nav-link">Accueil</a></li>
+                    <li><a href="#technique" class="nav-link">Technique</a></li>
+                    <li><a href="#projet" class="nav-link">Suivi de projet</a></li>
+                    <li><a href="#integration" class="nav-link">Intégration</a></li>
+                    <li><a href="#sources" class="nav-link">Sources</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ACCUEIL -->
+    <main id="home" class="page-section section-active">
+        <div class="container">
+            <section class="intro-section">
+                <h2>Introduction</h2>
+                <p>Bienvenue sur mon portfolio de deuxième année du BUT Informatique. Ce site a pour objectif de
+                    synthétiser mon expérience de stage, de mettre en évidence les compétences acquises en entreprise et
+                    de démontrer ma progression technique et professionnelle.</p>
+            </section>
+
+            <section class="context-section">
+                <div class="context-block">
+                    <h2>Contexte de l'Entreprise</h2>
+                    <p>J'ai effectué mon stage chez <strong>Alliance Informatique</strong>, une SARL située à Entzheim.
+                        L'entreprise est spécialisée dans le développement de solutions de gestion sur mesure et
+                        éditrice du logiciel ERP <strong>ITMS</strong>.</p>
+                    <p>J'ai intégré l'équipe de Recherche & Développement sous la tutelle d'<strong>André
+                            NEIVA</strong>, développeur de la section R&D, sous la direction de <strong>Quentin
+                            SCHNEIDER</strong>, Directeur de la Section.</p>
+                </div>
+
+                <div class="context-block">
+                    <h2>Contexte du Sujet</h2>
+                    <p>Le cœur de ma mission a consisté à développer et optimiser une application de gestion sous
+                        <strong>WinDev</strong> permettant une gestion fluide des bases de données
+                        <strong>HFSQL</strong>. L'un des enjeux majeurs a été de résoudre la problématique de
+                        synchronisation d'agendas : j'ai ainsi développé une communication bidirectionnelle avec
+                        <strong>Microsoft Outlook</strong> en intégrant l'<strong>API Microsoft Graph</strong>
+                        (authentification PKCE, requêtes HTTP, traitement JSON), le tout fonctionnant de manière
+                        asynchrone via des threads pour ne pas bloquer l'interface utilisateur.</p>
+                </div>
+            </section>
+
+            <section class="sfg-section">
+                <h2>Savoir-faire généraux mis en jeu</h2>
+                <ul class="sfg-list">
+                    <li>
+                        <span class="sfg-highlight sfg-db">SFG 1 : Savoir concevoir et manipuler des bases de données
+                            relationnelles</span>
+                        <p>Structuration des tables HFSQL, gestion de clés composées, vérification d'unicité et gestion
+                            de la synchronisation locale.</p>
+                    </li>
+                    <li>
+                        <span class="sfg-highlight sfg-api">SFG 2 : Savoir intégrer une API REST externe avec des
+                            protocoles de sécurité</span>
+                        <p>Interfaçage avec Microsoft Graph API, gestion des flux d'autorisation (PKCE), chiffrement AES
+                            pour la sécurisation des identifiants.</p>
+                    </li>
+                    <li>
+                        <span class="sfg-highlight sfg-code">SFG 3 : Savoir organiser son code et optimiser une
+                            application métier</span>
+                        <p>Création d'interfaces ergonomiques, programmation multithreadée pour des tâches en
+                            arrière-plan, et gestion sécurisée des fenêtres sous WinDev.</p>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <!-- TECHNIQUE -->
+    <main id="technique" class="page-section" style="display:none;">
+        <div class="container">
+            <h2>Aspects Techniques</h2>
+            <p class="section-intro">Cette section détaille les compétences informatiques techniques mobilisées lors de
+                mon stage, à travers l'illustration de traces spécifiques tirées du développement de l'application.</p>
+
+            <!-- Menu interne des sous-pages (Menu déroulant) -->
+            <div class="subpage-nav">
+                <label for="trace-select"><strong>Sélectionnez une trace :</strong></label>
+                <select id="trace-select" class="trace-dropdown">
+                    <option value="trace1">Trace 1 : Création et gestion d'un client</option>
+                    <option value="trace3">Trace 2 : Modèle de la Base de données</option>
+                    <option value="trace2">Trace 3 : Synchronisation Outlook</option>
+                    <option value="trace4">Trace 4 : Requête API Microsoft Graph</option>
+                    <option value="bilan-tech">Bilan technique</option>
+                </select>
+            </div>
+
+            <!-- Trace 1 -->
+            <div id="trace1" class="subpage-content subpage-active">
+                <h3>Trace 1 : Création et gestion d'un client</h3>
+                <ul class="legend-sfg">
+                    <li class="sfg-db">Savoir-faire : Bases de données relationnelles</li>
+                    <li class="sfg-code">Savoir-faire : Optimisation d'interface</li>
+                </ul>
+                <figure class="trace-figure">
+                    <img src="assets/images/trace_creation.png" alt="Interface de création d'un client">
+                    <figcaption>Trace 1 : Interface de saisie et de création d'un profil client dans l'application
+                        WinDev.</figcaption>
+                </figure>
+                <div class="trace-description">
+                    <h4>Descriptif de la trace</h4>
+                    <p>Cette capture représente l'interface de gestion développée lors de mes trois premières semaines
+                        de stage sur mon premier projet personnel. Elle illustre un formulaire complet de saisie
+                        permettant d'ajouter ou de modifier les informations d'un client, d'associer des contacts, et de
+                        gérer dynamiquement les villes. Cette trace est la pierre angulaire de l'application puisqu'elle
+                        a permis de valider l'ergonomie et la fiabilité des écritures en base.</p>
+                    <h4>Description des savoir-faire associés</h4>
+                    <p>Pour réaliser cette interface, j'ai mobilisé la <span class="sfg-db">gestion des bases de données
+                            HFSQL</span> en implémentant un système de liaisons (Client - Contact - Ville) avec des clés
+                        composées pour assurer l'intégrité de la base. J'ai également fait preuve d'<span
+                            class="sfg-code">optimisation et d'organisation du code</span> en créant une communication
+                        bidirectionnelle entre les fenêtres sous WinDev, en contrôlant rigoureusement la saisie, et en
+                        structurant les différents "plans" de l'interface.</p>
+                </div>
+            </div>
+
+            <!-- Trace 3 : BDD 1er projet -->
+            <div id="trace3" class="subpage-content" style="display:none;">
+                <h3>Trace 2 : Modèle de la Base de données (1er Projet)</h3>
+                <ul class="legend-sfg">
+                    <li class="sfg-db">Savoir-faire : Bases de données relationnelles</li>
+                </ul>
+                <figure class="trace-figure">
+                    <img src="assets/images/trace_bdd.png" alt="Schéma de la base de données">
+                    <figcaption>Trace 2 : Modélisation de la base de données de mon premier projet.</figcaption>
+                </figure>
+                <div class="trace-description">
+                    <h4>Descriptif de la trace</h4>
+                    <p>Cette trace présente le schéma relationnel de mon premier projet. Elle met en évidence la
+                        structure des tables HFSQL permettant de lier un client à de multiples contacts et à une ville
+                        spécifique. Ce modèle garantit qu'une ville n'est créée qu'une seule fois, tout en autorisant
+                        plusieurs villes à partager le même code postal.</p>
+                    <h4>Description des savoir-faire associés</h4>
+                    <p>Ce schéma illustre ma capacité à <span class="sfg-db">concevoir et manipuler des bases de données
+                            relationnelles</span>. J'ai utilisé des clés composées pour gérer efficacement les liaisons
+                        et assurer l'intégrité référentielle des données entre les tables mémoire et les fichiers
+                        physiques de la base HFSQL.</p>
+                </div>
+            </div>
+
+            <!-- Trace 2 (qui est la 3ème) -->
+            <div id="trace2" class="subpage-content" style="display:none;">
+                <h3>Trace 3 : Synchronisation de l'agenda avec Outlook</h3>
+                <ul class="legend-sfg">
+                    <li class="sfg-api">Savoir-faire : API REST externe et sécurité</li>
+                    <li class="sfg-code">Savoir-faire : Optimisation de code (Threads)</li>
+                </ul>
+                <figure class="trace-figure">
+                    <img src="assets/images/trace_sync.png" alt="Processus de synchronisation Outlook">
+                    <figcaption>Trace 3 : Processus de synchronisation de l'agenda avec l'API Microsoft Graph.
+                    </figcaption>
+                </figure>
+                <div class="trace-description">
+                    <h4>Descriptif de la trace</h4>
+                    <p>Cette trace met en évidence le cœur de mon second projet : l'interfaçage de l'agenda local de
+                        l'application avec le calendrier Microsoft Outlook des collaborateurs. Il s'agit d'un système
+                        bidirectionnel autonome qui détecte les modifications et crée les requêtes de mise à jour.</p>
+                    <h4>Description des savoir-faire associés</h4>
+                    <p>J'ai exploité mes compétences en <span class="sfg-api">intégration d'API REST</span> pour
+                        configurer l'authentification PKCE, paramétrer un serveur de redirection local sur le port 12345
+                        pour écouter le jeton d'accès, et formater les requêtes JSON (POST, DELETE, PATCH). Afin de
+                        répondre à l'exigence d'<span class="sfg-code">optimisation de l'application métier</span>, j'ai
+                        encapsulé ces opérations de synchronisation dans des processus asynchrones (threads) qui
+                        s'exécutent en arrière-plan toutes les 25 secondes. Cela permet à l'utilisateur de continuer à
+                        utiliser l'application sans gel de l'interface.</p>
+                </div>
+            </div>
+
+            <!-- Trace 4 : Requête API -->
+            <div id="trace4" class="subpage-content" style="display:none;">
+                <h3>Trace 4 : Requête API Microsoft Graph</h3>
+                <ul class="legend-sfg">
+                    <li class="sfg-api">Savoir-faire : API REST externe et sécurité</li>
+                </ul>
+                <figure class="trace-figure">
+                    <img src="assets/images/trace_requete.png" alt="Exemple de requête API">
+                    <figcaption>Trace 4 : Exécution d'une requête d'interrogation de l'API Microsoft Graph.</figcaption>
+                </figure>
+                <div class="trace-description">
+                    <h4>Descriptif de la trace</h4>
+                    <p>Cette trace montre l'exécution d'une requête HTTP vers l'API Microsoft Graph. Il s'agit d'une
+                        étape de test fondamentale pour interroger les serveurs Microsoft (endpoint CalendarView) et
+                        vérifier la bonne récupération des données au format JSON, avant l'intégration complète dans
+                        l'application WinDev.</p>
+                    <h4>Description des savoir-faire associés</h4>
+                    <p>Ce test prouve ma maitrise de l'<span class="sfg-api">intégration d'une API REST externe</span>.
+                        Pour obtenir ce résultat, j'ai dû préalablement configurer un flux d'authentification PKCE
+                        complexe, définir les permissions (Scopes) adéquates (Calendars.ReadWrite, User.Read) et
+                        récupérer un jeton d'accès (Access Token) sécurisé pour valider mes appels.</p>
+                </div>
+            </div>
+
+            <!-- Bilan -->
+            <div id="bilan-tech" class="subpage-content" style="display:none;">
+                <h3>Bilan et Analyse Technique</h3>
+                <div class="bilan-block">
+                    <h4>Bilan sur l'utilisation des bases de données et API</h4>
+                    <p><strong>Contexte d'apprentissage :</strong> Les concepts fondamentaux de modélisation de bases de
+                        données relationnelles ont été acquis lors de ma première et deuxième année de BUT. Néanmoins,
+                        l'implémentation de la sécurité (chiffrement AES) et l'intégration avancée d'une API OAuth2
+                        (Microsoft Graph, token PKCE) ont été apprises et maitrisées de manière autonome au cours de ce
+                        stage.</p>
+                    <p><strong>Difficultés rencontrées :</strong> La principale complexité a résidé dans l'architecture
+                        asynchrone (gestion fine des threads) combinée au traitement des flux JSON sous l'environnement
+                        WinDev, en particulier la gestion des réponses de l'API Delta d'Outlook.</p>
+                    <p><strong>Évaluation :</strong> <strong style="color:var(--primary-color);">À faire.</strong></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- SUIVI DE PROJET -->
+    <main id="projet" class="page-section" style="display:none;">
+        <div class="container">
+            <h2>Suivi de projet</h2>
+            <p class="section-intro">Cette section présente la méthodologie utilisée pour recueillir les besoins,
+                découper les tâches et organiser mon travail au sein de la section Recherche & Développement d'Alliance
+                Informatique.</p>
+
+            <div class="project-block"
+                style="background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); border: 1px solid var(--border-color); margin-bottom: 30px;">
+                <h3 style="color: var(--secondary-color); margin-bottom: 15px;">1. Prise en main de l'environnement
+                    (WinDev)</h3>
+                <p style="margin-bottom: 15px;">Durant ma première semaine, j'ai été confronté à un nouvel environnement
+                    de développement : <strong>WinDev</strong>. Afin de m'approprier rapidement cet outil, j'ai décidé
+                    de découper mon apprentissage en créant d'abord une version miniature de l'application de gestion.
+                </p>
+                <p>Cette méthode m'a permis d'isoler les problématiques : j'ai d'abord testé la création, modification
+                    et suppression d'un client dans un environnement bac-à-sable, avant d'aborder la complexité des
+                    "plans" WinDev pour structurer les vraies fenêtres. Cette approche itérative m'a garanti une montée
+                    en compétence rapide avant d'attaquer le développement de la fonctionnalité d'agenda de l'application 
+                    <strong>ITMS</strong>.</p>
+            </div>
+
+            <div class="container text-center" style="margin-top: 50px;">
+                <p><strong>Suite de l'analyse du suivi de projet : À faire.</strong></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- INTEGRATION -->
+    <main id="integration" class="page-section" style="display:none;">
+        <div class="container">
+            <h2>Intégration en entreprise</h2>
+            <div class="integration-block" style="background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); border: 1px solid var(--border-color); margin-bottom: 30px;">
+                <h3 style="color: var(--secondary-color); margin-bottom: 15px;">Mes premiers pas dans l'entreprise</h3>
+                <p style="margin-bottom: 15px;">Alliance Informatique est une entreprise avec un effectif réduit. Cette structure à taille humaine m'a permis de m'ouvrir très rapidement aux autres membres de l'équipe et de m'intégrer facilement à l'ambiance de l'entreprise.</p>
+                
+                <h3 style="color: var(--secondary-color); margin-bottom: 15px; margin-top: 25px;">La découverte de WinDev</h3>
+                <p style="margin-bottom: 15px;">À mes débuts, comme je découvrais la technologie WLangage et l'environnement WinDev, j'ai effectué mon premier projet personnel : le développement d'une mini-version des fonctionnalités de base du logiciel ITMS.</p>
+                <p style="margin-bottom: 15px;">Pour cela, mon tuteur André NEIVA me donnait régulièrement de nouvelles fonctionnalités à implémenter. Je devais réfléchir à la meilleure façon de les intégrer, ce qui m'a amené à chercher fréquemment des solutions par moi-même dans la <a href="https://doc.pcsoft.fr/fr-FR/" target="_blank" style="color: var(--primary-color); font-weight: 600; text-decoration: underline;">documentation WinDev</a>.</p>
+
+                <h3 style="color: var(--secondary-color); margin-bottom: 15px; margin-top: 25px;">Les conseils de mon tuteur</h3>
+                <p>Il insistait beaucoup sur deux points essentiels. Premièrement, il m'a encouragé à ne jamais hésiter à poser des questions en cas de besoin. Deuxièmement, il a souligné l'importance de tester rigoureusement son application : il m'a appris qu'il faut toujours se mettre dans la peau d'un client qui ne connaît pas l'application pour s'assurer qu'elle soit intuitive.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- SOURCES -->
+    <main id="sources" class="page-section" style="display:none;">
+        <div class="container">
+            <h2>Sources et Ressources</h2>
+            <p class="section-intro">Liste des ressources et outils utilisés pour mener à bien mes projets lors de ce
+                stage.</p>
+            <ul>
+                <li><a href="https://www.alliance-informatique.fr/" target="_blank" style="color: var(--secondary-color); font-weight: 500; text-decoration: underline;">Site officiel d'Alliance Informatique</a></li>
+                <li><a href="https://doc.pcsoft.fr/fr-FR/" target="_blank" style="color: var(--secondary-color); font-weight: 500; text-decoration: underline;">Documentation PC SOFT (WinDev / WLangage)</a></li>
+                <li><strong>À faire.</strong></li>
+            </ul>
+        </div>
+    </main>
+
+    <!-- Pied de page façon "Ancien Footer" mais amélioré -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-layout">
+                <div class="footer-left">
+                    <h3>Remerciements à</h3>
+                    <p>Mes professeurs et l'équipe pédagogique de l'IUT Nord Franche-Comté.</p>
+                    <p>M. Quentin SCHNEIDER, M. André NEIVA et l'équipe d'Alliance Informatique.</p>
+                </div>
+
+                <div class="footer-center">
+                    <p class="copyright">&copy; 2026 - Portfolio de stage - Johan HUNDERT</p>
+                    <a href="https://github.com/JoJohdt" target="_blank" class="github-btn">
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                </div>
+
+                <div class="footer-right">
+                    <img src="assets/images/logo_alliance_clean.png" alt="Alliance Informatique">
+                    <img src="assets/images/logo_info.png" alt="Logo Info">
+                    <img src="assets/images/logo_iut.png" alt="Logo IUT">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

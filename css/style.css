@@ -1,0 +1,371 @@
+/* Variables CSS - Couleurs d'Alliance Informatique et simplicité */
+:root {
+    --primary-color: #f47e20; /* Orange Alliance */
+    --secondary-color: #0073bb; /* Bleu Alliance */
+    --dark-color: #32373c; /* Gris foncé pour le texte */
+    --light-bg: #fdfdfd; /* Fond très clair classique */
+    --footer-bg: #fcfaf6; /* Fond très clair beige reprenant l'esprit de l'ancien footer */
+    --border-color: #e2e8f0;
+    --font-family: 'Inter', sans-serif;
+}
+
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--dark-color);
+    background-color: var(--light-bg);
+    line-height: 1.6;
+    padding-top: 80px; /* Compense le header fixe */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* HEADER (Toujours visible) */
+#main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    z-index: 1000;
+    height: 80px;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-identity h1 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 2px;
+}
+
+.header-identity h1 strong {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.header-email {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.main-nav a {
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--dark-color);
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.2s;
+    cursor: pointer;
+}
+
+.main-nav a:hover, .main-nav a.active {
+    color: var(--primary-color);
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s;
+}
+
+.main-nav a:hover::after, .main-nav a.active::after {
+    width: 100%;
+}
+
+/* GLOBAL PAGES */
+.page-section {
+    min-height: calc(100vh - 80px - 150px);
+    padding: 60px 0;
+}
+
+.page-section h2 {
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    border-bottom: 2px solid var(--primary-color);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.section-intro {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    color: #475569;
+}
+
+/* ACCUEIL */
+.intro-section {
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+}
+
+.context-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.context-block {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    border: 1px solid var(--border-color);
+}
+
+/* SAVOIR-FAIRE GENERAUX */
+.sfg-section {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    border: 1px solid var(--border-color);
+}
+
+.sfg-list {
+    list-style: none;
+    margin-top: 25px;
+}
+
+.sfg-list li {
+    margin-bottom: 25px;
+    padding-left: 20px;
+    border-left: 3px solid var(--border-color);
+}
+
+.sfg-highlight {
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.sfg-db { color: #d97706; } /* Ambre */
+.sfg-api { color: #0284c7; } /* Bleu */
+.sfg-code { color: #16a34a; } /* Vert */
+
+.sfg-list li:nth-child(1) { border-color: #d97706; }
+.sfg-list li:nth-child(2) { border-color: #0284c7; }
+.sfg-list li:nth-child(3) { border-color: #16a34a; }
+
+/* TECHNIQUE - SOUS PAGES (Menu Déroulant) */
+.subpage-nav {
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.trace-dropdown {
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-family: inherit;
+    border: 1px solid var(--primary-color);
+    border-radius: 6px;
+    background-color: #fff;
+    color: var(--dark-color);
+    cursor: pointer;
+    outline: none;
+    min-width: 300px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.trace-dropdown:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 2px rgba(0, 115, 187, 0.2);
+}
+
+.subpage-content h3 {
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.legend-sfg {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.trace-figure {
+    margin: 30px 0;
+    text-align: center;
+    background: #fff;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+.trace-figure img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+}
+
+.trace-figure figcaption {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #64748b;
+    font-style: italic;
+}
+
+.trace-description h4 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+}
+
+.bilan-block {
+    background: #f8fafc;
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.bilan-block p {
+    margin-bottom: 10px;
+}
+
+/* ANCIEN FOOTER STYLE (Clair, large, horizontal) */
+.main-footer {
+    background-color: var(--footer-bg);
+    color: var(--dark-color);
+    padding: 40px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-left {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-left h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+}
+
+.footer-left p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.footer-center {
+    flex: 1;
+    text-align: center;
+    min-width: 250px;
+}
+
+.copyright {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.github-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #4a3831;
+    color: white;
+    padding: 8px 25px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+
+.github-btn:hover {
+    background-color: #2b1f1a;
+}
+
+.footer-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+    min-width: 250px;
+}
+
+.footer-right img {
+    max-height: 50px;
+    max-width: 150px;
+    object-fit: contain;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+    #main-header {
+        height: auto;
+        padding: 15px 0;
+    }
+    body {
+        padding-top: 130px;
+    }
+    .context-section {
+        grid-template-columns: 1fr;
+    }
+    .footer-layout {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-right {
+        justify-content: center;
+    }
+}
